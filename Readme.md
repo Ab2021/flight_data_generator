@@ -20,33 +20,31 @@ The script performs two main tasks:
 
 ## How to Run
 
-1. Save the script to a file, e.g., `flight_data_analyzer.py`
+1. Open a terminal or command prompt
 
-2. Open a terminal or command prompt
-
-3. Navigate to the directory containing the script:
+2. Navigate to the directory containing the script:
    ```
    cd path/to/script/directory
    ```
 
-4. Run the script using Python:
+3. Run the script using Python:
    ```
    python flight_data_analyzer.py
    ```
 
-5. Set
+4. Set
    ```
    OUTPUT_DIR = os.getcwd()+"/tmp/flights"
    ```
    The script will generate files in the `/tmp/flights/`sub  directory. Ensure you have write permissions for this directory.
 
-7. Wait for the script to complete. It will print progress updates and final results to the console.
+5. Wait for the script to complete. It will print progress updates and final results to the console.
 
 ## Output
 
 The script will generate two types of output:
 
-1. JSON files in the `/tmp/flights/` directory (or the directory specified by `OUTPUT_DIR`)
+1. JSON files in the `/tmp/flights/` sub directory (or the directory specified by `OUTPUT_DIR`)
 2. Console output showing:
    - Total records processed
    - Number of dirty records
@@ -63,3 +61,6 @@ You can modify the following constants at the top of the script to customize its
 - `K`: Number of cities
 - `L`: Probability for NULL values
 - `OUTPUT_DIR`: Directory where JSON files will be saved
+
+Current output is stored in this Gdrive folder:
+https://drive.google.com/drive/folders/1S17VvT04KObYpGVnTb1Np6nU7X_Q8ZpT?usp=sharing
