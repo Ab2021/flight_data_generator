@@ -34,9 +34,9 @@ The script performs two main tasks:
 
 4. Set
    ```
-   OUTPUT_DIR = os.getcwd()+"/tmp/flights"
+   OUTPUT_DIR = os.getcwd()+"/tmp/flights_1"
    ```
-   The script will generate files in the `/tmp/flights/`sub  directory. Ensure you have write permissions for this directory.
+   The script will generate files in the `/tmp/flights_1/`sub  directory. Ensure you have write permissions for this directory.
 
 5. Wait for the script to complete. It will print progress updates and final results to the console.
 
@@ -44,7 +44,7 @@ The script performs two main tasks:
 
 The script will generate two types of output:
 
-1. JSON files in the `/tmp/flights/` sub directory (or the directory specified by `OUTPUT_DIR`)
+1. JSON files in the `/tmp/flights_1/` sub directory (or the directory specified by `OUTPUT_DIR`)
 2. Console output showing:
    - Total records processed
    - Number of dirty records
