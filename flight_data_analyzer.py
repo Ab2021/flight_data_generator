@@ -20,8 +20,7 @@ Key features:
 1. Generation of synthetic flight data
 2. Multithreaded file generation for improved performance
 3. Parallel processing for file analysis
-4. Divide & conquer approach for JSON output
-5. Analysis of generated data, including:
+4. Analysis of generated data, including:
    - Total no. of records and "miss" (incomplete) records
    - Average and 95th percentile flight durations for top destinations
    - Cities with maximum passenger arrivals and departures
