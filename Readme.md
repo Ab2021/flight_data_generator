@@ -10,7 +10,7 @@ The script performs two main tasks:
 
 2. **Analysis Phase**: Processes all generated files to produce statistics including:
    - Total number of records processed
-   - Number of "dirty" records (records with NULL values)
+   - Number of "miss" records (records with NULL values)
    - Average and 95th percentile of flight duration for the top 25 destination cities
    - Cities with the maximum number of passengers arrived and departed
 
