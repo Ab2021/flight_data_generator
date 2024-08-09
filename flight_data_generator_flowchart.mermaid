@@ -1,0 +1,62 @@
+graph TD
+    A[Start] --> B[Import libraries]
+    B --> C[Define constants N, M_MIN, M_MAX, K, L]
+    C --> D[Set up OUTPUT_DIR]
+    D --> E[Generate list of cities]
+    E --> F[Define generate_flight_record function]
+    F --> G[Define generate_json_chunk function]
+    G --> H[Define generate_json_file function]
+    H --> I[Define process_file function]
+    I --> J[Define merge_stats function]
+    J --> K[Define analyze_files function]
+    K --> L[Define main function]
+    L --> M{Execute main function}
+    M --> N[Start timer]
+    N --> O[Print 'Generating N JSON files...']
+    O --> P[Create ThreadPoolExecutor]
+    P --> Q[Execute generate_json_file N times in parallel]
+    Q --> R[Wait for all files to be generated]
+    R --> S[Print 'Analyzing files...']
+    S --> T[Call analyze_files function]
+    T --> U[Create ProcessPoolExecutor]
+    U --> V[Process all files in parallel using process_file]
+    V --> W[Collect results from all processes]
+    W --> X[Merge results using merge_stats]
+    X --> Y[Calculate statistics]
+    Y --> Z[End timer]
+    Z --> AA[Print results]
+    AA --> AB[End]
+
+    subgraph generate_json_file
+        Q1[Generate random number of records]
+        Q2[Call generate_json_chunk]
+        Q3[Write chunk to JSON file]
+    end
+
+    subgraph process_file
+        V1[Read JSON file]
+        V2[Process each record]
+        V3[Calculate file statistics]
+    end
+
+    subgraph analyze_files
+        T1[Get list of files in OUTPUT_DIR]
+        T2[Create ProcessPoolExecutor]
+        T3[Process files in parallel]
+        T4[Merge results]
+        T5[Calculate final statistics]
+    end
+
+    Q --> Q1
+    Q1 --> Q2
+    Q2 --> Q3
+
+    V --> V1
+    V1 --> V2
+    V2 --> V3
+
+    T --> T1
+    T1 --> T2
+    T2 --> T3
+    T3 --> T4
+    T4 --> T5
